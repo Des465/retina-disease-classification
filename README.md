@@ -1,2 +1,2 @@
-# Comparison-of-non-convex-stochastic-quasi-newtonian-optimizers-on-retina-disease-classification
-A mini research on behavior of non-convex stochastic quasi newtonian methods on medical imaging project. A vast comparison of optimizers' capabilities of convergence, overall generalization. Impact of warmed up learning rate scheduling, sharpness aware minimization (SAM) in acquiring competent optima.
+# Retina disease classification using Efficient Net B3.
+Retina diseases are a significant problem, especially amongst elderlies, that result in headaches, vision loss or even blindness. This project utilizes computer vision and best practices to achieve a high scores in classification task, assisting in rapid illness categorization.
