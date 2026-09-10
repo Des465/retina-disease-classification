@@ -49,7 +49,6 @@ pip install -r requirements.txt
 jupyter notebook retina_classification.ipynb
 ```
 
-Dataset: `[link the Kaggle/source dataset here]`
 
 ---
 
