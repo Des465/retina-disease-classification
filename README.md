@@ -7,7 +7,7 @@ A multiclass image classifier that identifies glaucoma, diabetic retinopathy, an
 
 Fundus photographs are cheap to take and expensive to read, since interpreting them requires an ophthalmologist. That gap is why automated screening is interesting: not to replace the diagnosis, but to triage which images a specialist should look at first.
 
-The three conditions here don't behave the same way. Diabetic retinopathy leaves fairly distinct lesions. Glaucoma shows up as changes in the optic disc that are subtler and easier to confuse with normal anatomical variation. So the interesting part isn't the headline accuracy — it's where the model fails.
+The three conditions here don't behave the same way. Diabetic retinopathy leaves fairly distinct lesions. Glaucoma shows up as changes in the optic disc that are subtler and easier to confuse with normal anatomical variation. So the interesting part isn't the headline accuracy - it's where the model fails.
 
 ## Approach
 
@@ -29,9 +29,9 @@ Overall accuracy on a 422-image held-out set: **85.8%**. Macro-averaged F1: **0.
 
 The per-class breakdown is the table worth reading, and the spread in it is the actual result.
 
-Diabetic retinopathy is comfortably the easiest class at 0.949 — it produces discrete, high-contrast lesions that survive downsampling. Cataracts sit next, since lens opacity changes the whole image rather than one region.
+Diabetic retinopathy is comfortably the easiest class at 0.949 - it produces discrete, high-contrast lesions that survive downsampling. Cataracts sit next, since lens opacity changes the whole image rather than one region.
 
-Glaucoma is the weak point, at 0.778 F1 and only 0.762 recall. Nearly a quarter of glaucoma cases are missed. That's the expensive kind of error for a screening tool: a false negative sends someone home. Glaucoma shows up as changes in optic disc cupping, which is a proportional judgement about one small structure, and it overlaps with normal anatomical variation. The confusion is mutual — "normal" has the second-lowest precision at 0.811, meaning a good share of what the model calls healthy isn't.
+Glaucoma is the weak point, at 0.778 F1 and only 0.762 recall. Nearly a quarter of glaucoma cases are missed. That's the expensive kind of error for a screening tool: a false negative sends someone home. Glaucoma shows up as changes in optic disc cupping, which is a proportional judgement about one small structure, and it overlaps with normal anatomical variation. The confusion is mutual - "normal" has the second-lowest precision at 0.811, meaning a good share of what the model calls healthy isn't.
 
 So the headline 85.8% is close to meaningless on its own. The model is good at the condition that's already easy to spot and mediocre at the one where automated screening would add the most value.
 
