@@ -2,8 +2,6 @@
 
 A multiclass image classifier that identifies glaucoma, diabetic retinopathy, and cataracts from retinal fundus photographs, built on EfficientNet-B3 with transfer learning.
 
-![Confusion matrix](assets/confusion_matrix.png)
-<!-- Replace with a real confusion matrix — it's the most informative single image for this project. -->
 
 ## The problem
 
