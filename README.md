@@ -12,7 +12,7 @@ The three conditions here don't behave the same way. Diabetic retinopathy leaves
 ## Approach
 
 - **EfficientNet-B3** pretrained on ImageNet, fine-tuned on the fundus dataset. B3 was a compromise: bigger variants overfit quickly on a dataset this size.
-- **Training loop** using Adam, with learning-rate warmup and plateau-based scheduling. Warmup mattered more than I expected — without it the early epochs destabilised the pretrained weights.
+- **Training loop** using Adam, with learning-rate warmup and plateau-based scheduling. Warmup mattered more than I expected, without it the early epochs destabilised the pretrained weights.
 - **Augmentation** via Albumentations: colour jitter, Gaussian blur, flips. Fundus images vary a lot in illumination and colour between cameras, so colour jitter is closer to realistic variation than a generic augmentation choice.
 - **Class imbalance** handled through augmentation rather than resampling.
 
